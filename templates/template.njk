@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Optimised Zondicons</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased text-gray-900 bg-gray-100">
+<div class="container mx-auto">
+    <ul class="flex flex-wrap">
+        {% for item in icons %}
+            <li class="m-4">
+                <button type="button" class="flex bg-white px-4 py-2" onclick="copySvgCode('{{ item.id }}-input')">
+                    <span class="mr-2">{{ item.data | safe }}</span>
+                    <span class="text-sm">{{ item.id }}</span>
+                </button>
+                <textarea class="text-xs w-32 h-4 overflow-hidden" type="text" id="{{ item.id }}-input">{{ item.data }}</textarea>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+<script>
+    function copySvgCode(id) {
+      const el = document.getElementById(id);
+      el.focus();
+      el.select();
+      window.document.execCommand('copy');
+    }
+</script>
+</body>
+</html>

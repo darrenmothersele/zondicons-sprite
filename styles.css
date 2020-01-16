@@ -1,0 +1,12 @@
+/* purgecss start ignore */
+@tailwind  base;
+@tailwind  components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
+/* purgecss start ignore */
+svg {
+    @apply w-6 h-6 fill-current text-gray-700;
+}
+/* purgecss end ignore */
