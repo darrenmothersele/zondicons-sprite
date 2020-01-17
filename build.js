@@ -13,7 +13,11 @@ const nunjucks = require('nunjucks');
       .map(
         path => fs.readFile(path, 'utf8')
           .then(data => svgo.optimize(data, {path}))
-          .then(({data, path}) => ({data, id: path.replace('zondicons/', '').replace('.svg', '')}))
+          .then(({data, path}) => ({
+            data,
+            length: Buffer.byteLength(data, 'utf8'),
+            id: path.replace('zondicons/', '').replace('.svg', '')
+          }))
       )
   );
 

@@ -22,9 +22,10 @@
         <ul class="flex flex-wrap justify-center">
             {% for item in icons %}
                 <li class="m-1">
-                    <button type="button" class="flex w-64 bg-white px-4 py-2" onclick="copySvgCode('{{ item.id }}-input')">
-                        <span class="mr-2">{{ item.data | safe }}</span>
-                        <span class="text-sm text-gray-700">{{ item.id }}</span>
+                    <button type="button" class="flex items-center w-64 bg-white px-4 py-2" onclick="copySvgCode('{{ item.id }}-input')">
+                        <span class="mr-4">{{ item.data | safe }}</span>
+                        <span class="flex-1 text-left text-sm text-gray-700">{{ item.id }}</span>
+                        <span class="text-xs text-gray-600">{{  item.length }}b</span>
                     </button>
                     <textarea class="text-xs w-64 h-4 overflow-hidden bg-gray-200 text-gray-300" type="text" id="{{ item.id }}-input">{{ item.data }}</textarea>
                 </li>
