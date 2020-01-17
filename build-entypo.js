@@ -28,7 +28,7 @@ const nunjucks = require('nunjucks');
   );
 
   nunjucks.configure('templates', { autoescape: true });
-  const output = nunjucks.render('template.njk', { icons });
+  const output = nunjucks.render('template-entypo.njk', { icons });
 
   await fs.outputFile('docs/entypo.html', output);
 
