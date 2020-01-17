@@ -20,6 +20,6 @@ const nunjucks = require('nunjucks');
   nunjucks.configure('templates', { autoescape: true });
   const output = nunjucks.render('template.njk', { icons });
 
-  await fs.outputFile('public/index.html', output);
+  await fs.outputFile('docs/index.html', output);
 
 })();
