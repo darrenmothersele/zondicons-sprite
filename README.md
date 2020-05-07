@@ -2,6 +2,13 @@
 
 Zondicons processed using SVGO and combined for use as an SVG sprite
 
+Access the optomised versions online here:
+http://www.darrenmothersele.com/zondicons-sprite/
+
+I've also done the same thing with Entypo icons. The optomised versions are here:
+http://www.darrenmothersele.com/zondicons-sprite/entypo
+
+
 What's Zondicons?
 
 > A set of free premium SVG icons for you to use on your digital products.
